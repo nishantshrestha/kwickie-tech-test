@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19BE2CD91E016A5C003159A0 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE2CD81E016A5C003159A0 /* SignInController.swift */; };
 		19E06CAE1E01685C00685C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E06CAD1E01685C00685C12 /* AppDelegate.swift */; };
-		19E06CB01E01685C00685C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E06CAF1E01685C00685C12 /* ViewController.swift */; };
 		19E06CB31E01685C00685C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E06CB11E01685C00685C12 /* Main.storyboard */; };
 		19E06CB51E01685C00685C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E06CB41E01685C00685C12 /* Assets.xcassets */; };
 		19E06CB81E01685C00685C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E06CB61E01685C00685C12 /* LaunchScreen.storyboard */; };
 		19E06CC31E01685C00685C12 /* KwickieTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E06CC21E01685C00685C12 /* KwickieTestTests.swift */; };
 		19E06CCE1E01685C00685C12 /* KwickieTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E06CCD1E01685C00685C12 /* KwickieTestUITests.swift */; };
+		402F522BDDA52DDB6843D8B2 /* Pods_KwickieTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CEAFB8848AD81ECA480A0F /* Pods_KwickieTest.framework */; };
+		6DDAB9772E101B681B388515 /* Pods_KwickieTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E387B445188BA956B39E3E76 /* Pods_KwickieTestUITests.framework */; };
+		C325B3A15762E95ED9CF3176 /* Pods_KwickieTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99721B468199A034CC381C16 /* Pods_KwickieTestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		194CF95581F73D016A6803D7 /* Pods-KwickieTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwickieTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KwickieTestTests/Pods-KwickieTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		19BE2CD81E016A5C003159A0 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInController.swift; path = Controllers/SignInController.swift; sourceTree = "<group>"; };
 		19E06CAA1E01685C00685C12 /* KwickieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KwickieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E06CAD1E01685C00685C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19E06CAF1E01685C00685C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19E06CB21E01685C00685C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E06CB41E01685C00685C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19E06CB71E01685C00685C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		19E06CC91E01685C00685C12 /* KwickieTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KwickieTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E06CCD1E01685C00685C12 /* KwickieTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KwickieTestUITests.swift; sourceTree = "<group>"; };
 		19E06CCF1E01685C00685C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81761474BDCCC5747E261FF6 /* Pods-KwickieTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwickieTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KwickieTestUITests/Pods-KwickieTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		83D5B103809BC54423C2E83D /* Pods-KwickieTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwickieTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KwickieTest/Pods-KwickieTest.debug.xcconfig"; sourceTree = "<group>"; };
+		89CEAFB8848AD81ECA480A0F /* Pods_KwickieTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KwickieTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99721B468199A034CC381C16 /* Pods_KwickieTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KwickieTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE136A19095FD5E99051D552 /* Pods-KwickieTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwickieTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KwickieTestUITests/Pods-KwickieTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E387B445188BA956B39E3E76 /* Pods_KwickieTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KwickieTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90464088FE84D0062D8A4E5 /* Pods-KwickieTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwickieTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KwickieTestTests/Pods-KwickieTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD8D6CE1340F3BDF8D20D963 /* Pods-KwickieTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KwickieTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-KwickieTest/Pods-KwickieTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402F522BDDA52DDB6843D8B2 /* Pods_KwickieTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C325B3A15762E95ED9CF3176 /* Pods_KwickieTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DDAB9772E101B681B388515 /* Pods_KwickieTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				19E06CC11E01685C00685C12 /* KwickieTestTests */,
 				19E06CCC1E01685C00685C12 /* KwickieTestUITests */,
 				19E06CAB1E01685C00685C12 /* Products */,
+				D775796E47A997072276C7C8 /* Pods */,
+				D22628ADE451BA6B38F5BA26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				19E06CAD1E01685C00685C12 /* AppDelegate.swift */,
-				19E06CAF1E01685C00685C12 /* ViewController.swift */,
 				19E06CB11E01685C00685C12 /* Main.storyboard */,
+				19BE2CD81E016A5C003159A0 /* SignInController.swift */,
 				19E06CB41E01685C00685C12 /* Assets.xcassets */,
 				19E06CB61E01685C00685C12 /* LaunchScreen.storyboard */,
 				19E06CB91E01685C00685C12 /* Info.plist */,
@@ -125,6 +142,29 @@
 			path = KwickieTestUITests;
 			sourceTree = "<group>";
 		};
+		D22628ADE451BA6B38F5BA26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89CEAFB8848AD81ECA480A0F /* Pods_KwickieTest.framework */,
+				99721B468199A034CC381C16 /* Pods_KwickieTestTests.framework */,
+				E387B445188BA956B39E3E76 /* Pods_KwickieTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D775796E47A997072276C7C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83D5B103809BC54423C2E83D /* Pods-KwickieTest.debug.xcconfig */,
+				FD8D6CE1340F3BDF8D20D963 /* Pods-KwickieTest.release.xcconfig */,
+				194CF95581F73D016A6803D7 /* Pods-KwickieTestTests.debug.xcconfig */,
+				E90464088FE84D0062D8A4E5 /* Pods-KwickieTestTests.release.xcconfig */,
+				81761474BDCCC5747E261FF6 /* Pods-KwickieTestUITests.debug.xcconfig */,
+				BE136A19095FD5E99051D552 /* Pods-KwickieTestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19E06CD21E01685C00685C12 /* Build configuration list for PBXNativeTarget "KwickieTest" */;
 			buildPhases = (
+				A8B8D2FC5AF2A2A82DE70919 /* [CP] Check Pods Manifest.lock */,
 				19E06CA61E01685C00685C12 /* Sources */,
 				19E06CA71E01685C00685C12 /* Frameworks */,
 				19E06CA81E01685C00685C12 /* Resources */,
+				2C8C6B526ED5CBD39E639AFB /* [CP] Embed Pods Frameworks */,
+				1CEF6B4828F4965DA406E622 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19E06CD51E01685C00685C12 /* Build configuration list for PBXNativeTarget "KwickieTestTests" */;
 			buildPhases = (
+				9F5CC4CAD9A1AD1D8D6C167D /* [CP] Check Pods Manifest.lock */,
 				19E06CBA1E01685C00685C12 /* Sources */,
 				19E06CBB1E01685C00685C12 /* Frameworks */,
 				19E06CBC1E01685C00685C12 /* Resources */,
+				F16ACC70777C386DDDC7F938 /* [CP] Embed Pods Frameworks */,
+				A65EBAABF931B0D3B64D6360 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19E06CD81E01685C00685C12 /* Build configuration list for PBXNativeTarget "KwickieTestUITests" */;
 			buildPhases = (
+				3BF35573123D28EE98C1DAE0 /* [CP] Check Pods Manifest.lock */,
 				19E06CC51E01685C00685C12 /* Sources */,
 				19E06CC61E01685C00685C12 /* Frameworks */,
 				19E06CC71E01685C00685C12 /* Resources */,
+				03F461A5A5BD637A4F3C07F3 /* [CP] Embed Pods Frameworks */,
+				E0A67A690255BEBF43996897 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +303,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03F461A5A5BD637A4F3C07F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KwickieTestUITests/Pods-KwickieTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CEF6B4828F4965DA406E622 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KwickieTest/Pods-KwickieTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C8C6B526ED5CBD39E639AFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KwickieTest/Pods-KwickieTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BF35573123D28EE98C1DAE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F5CC4CAD9A1AD1D8D6C167D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A65EBAABF931B0D3B64D6360 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KwickieTestTests/Pods-KwickieTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8B8D2FC5AF2A2A82DE70919 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0A67A690255BEBF43996897 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KwickieTestUITests/Pods-KwickieTestUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16ACC70777C386DDDC7F938 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KwickieTestTests/Pods-KwickieTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		19E06CA61E01685C00685C12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19E06CB01E01685C00685C12 /* ViewController.swift in Sources */,
 				19E06CAE1E01685C00685C12 /* AppDelegate.swift in Sources */,
+				19BE2CD91E016A5C003159A0 /* SignInController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +595,7 @@
 		};
 		19E06CD31E01685C00685C12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83D5B103809BC54423C2E83D /* Pods-KwickieTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KwickieTest/Info.plist;
@@ -420,6 +608,7 @@
 		};
 		19E06CD41E01685C00685C12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD8D6CE1340F3BDF8D20D963 /* Pods-KwickieTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KwickieTest/Info.plist;
@@ -432,6 +621,7 @@
 		};
 		19E06CD61E01685C00685C12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 194CF95581F73D016A6803D7 /* Pods-KwickieTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,6 +636,7 @@
 		};
 		19E06CD71E01685C00685C12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90464088FE84D0062D8A4E5 /* Pods-KwickieTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +651,7 @@
 		};
 		19E06CD91E01685C00685C12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81761474BDCCC5747E261FF6 /* Pods-KwickieTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = KwickieTestUITests/Info.plist;
@@ -473,6 +665,7 @@
 		};
 		19E06CDA1E01685C00685C12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE136A19095FD5E99051D552 /* Pods-KwickieTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = KwickieTestUITests/Info.plist;
@@ -503,6 +696,7 @@
 				19E06CD41E01685C00685C12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19E06CD51E01685C00685C12 /* Build configuration list for PBXNativeTarget "KwickieTestTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +705,7 @@
 				19E06CD71E01685C00685C12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19E06CD81E01685C00685C12 /* Build configuration list for PBXNativeTarget "KwickieTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +714,7 @@
 				19E06CDA1E01685C00685C12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

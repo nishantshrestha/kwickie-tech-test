@@ -1,0 +1,6 @@
+framework module Pods_KwickieTestTests {
+  umbrella header "Pods-KwickieTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
