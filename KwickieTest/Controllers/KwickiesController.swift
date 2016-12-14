@@ -10,8 +10,15 @@ import UIKit
 
 class KwickiesController: UITableViewController {
 
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let user = user {
+            // Get kwickie videos
+            // TODO: Architecture decision: Fetch videos here; or prior to coming to this controller.
+        }
     }
 
 }
