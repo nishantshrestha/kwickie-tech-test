@@ -80,6 +80,8 @@ class SignInController: UIViewController {
                                 // Set the accessToken in the singleton class.
                                 NetworkManager.sharedInstance.accessToken = accessToken
                                 
+                                // TODO: Also store the accessToken in the NSUserDefaults so the user doesn't have to login everytime.
+                                
                                 // Call completion handler
                                 completionHandler(user, "")
                             }

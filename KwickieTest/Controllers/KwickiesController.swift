@@ -37,6 +37,7 @@ class KwickiesController: UITableViewController {
                 "limit": responseLimit
             ]
             
+            // Fetch approved Kwickies
             getApprovedKwickiesWithParameters(params: params, completionHandler: { [weak self] (kwickies) in
                 print("here are the \(kwickies?.count) kwickies")
                 
@@ -86,10 +87,18 @@ extension KwickiesController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Kwickie for index: \(indexPath.row)"
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "kwickieCell", for: indexPath) as? KwickieCell, let kwickie = kwickies?[indexPath.row] {
+            // Pass the relevant kwickie information to the cell
+            cell.kwickie = kwickie
+            // Return cell
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Deselect tableview
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
