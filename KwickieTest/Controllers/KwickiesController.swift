@@ -1,5 +1,5 @@
 //
-//  SignInController.swift
+//  KwickiesController.swift
 //  KwickieTest
 //
 //  Created by Nishant Shrestha on 14/12/16.
@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
-class SignInController: UIViewController {
+class KwickiesController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
