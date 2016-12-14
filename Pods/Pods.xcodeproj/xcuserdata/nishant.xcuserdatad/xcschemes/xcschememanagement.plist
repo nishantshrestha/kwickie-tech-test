@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JGProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,6 +52,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>24C06BB023551D33C81896D52962FED3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24F73826C21CBCBE186224114BD582A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
@@ -62,17 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9038245F7F4889381327710BC99BB871</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9502FB01641FBABB78522037E882757B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8D6C8147DB67EAFAF36D541A27B9B34</key>
+		<key>B3F82B4E1C1DF7FCCCA473A0AC5ABA10</key>
 		<dict>
 			<key>primary</key>
 			<true/>

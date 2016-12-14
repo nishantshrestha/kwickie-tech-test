@@ -13,6 +13,9 @@ target 'KwickieTest' do
     # Object Mapping
     pod 'ObjectMapper', '~> 2.2'
     pod 'AlamofireObjectMapper', '~> 4.0'
+    
+    # UI
+    pod 'JGProgressHUD'
 
 end
 
