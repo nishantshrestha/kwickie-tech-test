@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireObjectMapper
+import SwiftyJSON
 
 class KwickiesController: UITableViewController {
 
     var user: User?
+    
+    // Variables to keep track of "infinite" scrolling
+    var currentOffset: Int = 372
+    var responseLimit: Int = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +25,25 @@ class KwickiesController: UITableViewController {
         if let user = user {
             // Get kwickie videos
             // TODO: Architecture decision: Fetch videos here; or prior to coming to this controller.
+            
+            // Create the params for the Kwickies fetch network request
+            let params: Parameters = [
+                "offset": currentOffset,
+                "limit": responseLimit
+            ]
+            
+            print(KwickiesRouter.Approved.description)
+            
+            Alamofire.request(KwickiesRouter.Approved.description, method: .get, parameters: params, encoding: URLEncoding.default)
+                .validate()
+                .responseArray(completionHandler: { (response: DataResponse<[Kwickie]>) in
+                    let kwickies = response.result.value
+                    
+                    print("total kwickies: \(kwickies?.count)")
+                    
+                    print("first:")
+                    print(kwickies?.first?.answerUser.firstName)
+                })
         }
     }
 

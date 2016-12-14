@@ -11,6 +11,8 @@
 		19BE2CDB1E017233003159A0 /* KwickiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE2CDA1E017233003159A0 /* KwickiesController.swift */; };
 		19BE2CDD1E017285003159A0 /* KwickiesController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BE2CDC1E017285003159A0 /* KwickiesController.storyboard */; };
 		19BE2CDF1E0177EA003159A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE2CDE1E0177EA003159A0 /* User.swift */; };
+		19BE2CE41E01873B003159A0 /* Kwickie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE2CE31E01873B003159A0 /* Kwickie.swift */; };
+		19BE2CE81E018A8F003159A0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE2CE71E018A8F003159A0 /* Router.swift */; };
 		19E06CAE1E01685C00685C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E06CAD1E01685C00685C12 /* AppDelegate.swift */; };
 		19E06CB31E01685C00685C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E06CB11E01685C00685C12 /* Main.storyboard */; };
 		19E06CB51E01685C00685C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E06CB41E01685C00685C12 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		19BE2CDA1E017233003159A0 /* KwickiesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KwickiesController.swift; path = Controllers/KwickiesController.swift; sourceTree = "<group>"; };
 		19BE2CDC1E017285003159A0 /* KwickiesController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = KwickiesController.storyboard; path = Storyboards/KwickiesController.storyboard; sourceTree = "<group>"; };
 		19BE2CDE1E0177EA003159A0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		19BE2CE31E01873B003159A0 /* Kwickie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Kwickie.swift; path = Model/Kwickie.swift; sourceTree = "<group>"; };
+		19BE2CE71E018A8F003159A0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Helpers/Router.swift; sourceTree = "<group>"; };
 		19E06CAA1E01685C00685C12 /* KwickieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KwickieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E06CAD1E01685C00685C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E06CB21E01685C00685C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				19BE2CDE1E0177EA003159A0 /* User.swift */,
+				19BE2CE31E01873B003159A0 /* Kwickie.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -119,6 +124,14 @@
 				19BE2CDC1E017285003159A0 /* KwickiesController.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		19BE2CE61E018A76003159A0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				19BE2CE71E018A8F003159A0 /* Router.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		19E06CA11E01685C00685C12 = {
@@ -150,6 +163,7 @@
 				19BE2CE21E0178B4003159A0 /* Storyboards */,
 				19BE2CE11E0178AA003159A0 /* Controllers */,
 				19BE2CE01E0178A0003159A0 /* Models */,
+				19BE2CE61E018A76003159A0 /* Helpers */,
 				19E06CB41E01685C00685C12 /* Assets.xcassets */,
 				19E06CB61E01685C00685C12 /* LaunchScreen.storyboard */,
 				19E06CB91E01685C00685C12 /* Info.plist */,
@@ -481,8 +495,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BE2CDB1E017233003159A0 /* KwickiesController.swift in Sources */,
+				19BE2CE41E01873B003159A0 /* Kwickie.swift in Sources */,
 				19E06CAE1E01685C00685C12 /* AppDelegate.swift in Sources */,
 				19BE2CD91E016A5C003159A0 /* SignInController.swift in Sources */,
+				19BE2CE81E018A8F003159A0 /* Router.swift in Sources */,
 				19BE2CDF1E0177EA003159A0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

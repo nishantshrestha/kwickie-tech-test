@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import AlamofireObjectMapper
+import ObjectMapper
 import SwiftyJSON
 import JGProgressHUD
 
@@ -26,44 +26,58 @@ class SignInController: UIViewController {
             "password": "KwickieRocks"
         ]
         
-        signInWithParameters(params: params) { (user, error) in
+        signInWithParameters(params: params) { [weak self] (user, error) in
             // If a user object was returned, then proceed.
             if let user = user {
-                // Debug prints
-                print("auth token is: \(user.authToken)")
-                print("welcome to kwickie: \(user.firstName)")
+                // Go to KwickiesController
+                if let kwickiesCtrl = KwickiesController.storyboardInstance() {
+                    // Pass the user object
+                    kwickiesCtrl.user = user
+                    
+                    // TODO: Should we fetch the videos here?
+                    
+                    // Push controller to the navigation stack
+                    self?.navigationController?.pushViewController(kwickiesCtrl, animated: true)
+                }
                 
             } else {
                  // Else show an error message
-                print("Login error. \(error)")
+                print("Something went wrong while trying to login. Server message: \(error)")
             }
         }
     }
     
     func signInWithParameters(params: Parameters, completionHandler: @escaping (User?, String) -> Void) {
         
-        // TODO: Move this to a separate Router file.
-        let loginURL = "https://bigdev.kwickie.com/api/members/login"
-        
         // TODO: Create separate network request manager that handles errors?
         
         // Perform network request
-        Alamofire.request(loginURL, method: .post, parameters: params, encoding: JSONEncoding.default)
+        Alamofire.request(AuthRouter.Login.description, method: .post, parameters: params, encoding: JSONEncoding.default)
             .validate()
-            // Debug JSON print
             .responseJSON { [weak self] response in
                 if let data = response.data {
+                    // Create JSON from response data
                     let json = JSON(data: data)
-                    print(json)
+                    
+                    // Ensure that there were no errors during login.
+                    if let errorDictionary = json["error"].dictionary {
+                        // Get the error message if available, else use generic error message
+                        let message = errorDictionary["message"]?.string ?? "Login failed. Please try again."
+                        
+                        // Call completion handler
+                        completionHandler(nil, message)
+                    } else {
+                        if let accessToken = json["id"].string, let userDictionary = json["user"].dictionaryObject {
+                            let user = Mapper<User>().map(JSON: userDictionary)
+                            
+                            // Set the accessToken in the singleton class.
+                            NetworkManager.sharedInstance.accessToken = accessToken
+                            
+                            // Call completion handler
+                            completionHandler(user, "")
+                        }
+                    }
                 }
-            }
-            .responseObject { [weak self] (response: DataResponse<User>) in
-                // Get the user response
-                let user = response.result.value
-                // Get errors, if any.
-                let error = response.result.error?.localizedDescription ?? ""
-                // Call completion handler
-                completionHandler(user, error)
             }
     }
 }

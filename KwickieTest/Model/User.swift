@@ -15,7 +15,6 @@ class User: Mappable {
     var profilePicturePath: String!
     var firstName: String!
     var lastName: String!
-    var authToken: String!
     
     // TODO: Implement other properties (not crucial for tech test)
     
@@ -24,11 +23,10 @@ class User: Mappable {
     }
     
     func mapping(map: Map) {
-        userID <- map["user.id"]
-        email <- map["user.email"]
-        profilePicturePath <- map["user.profilePicturePath"]
-        firstName <- map["user.firstName"]
-        lastName <- map["user.lastName"]
-        authToken <- map["id"] // "id" returns the auth token
+        userID <- map["id"]
+        email <- map["email"]
+        profilePicturePath <- map["profilePicturePath"]
+        firstName <- map["firstName"]
+        lastName <- map["lastName"]
     }
 }
