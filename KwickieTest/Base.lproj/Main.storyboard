@@ -30,6 +30,20 @@
                                     <action selector="signInButtonPressed:" destination="OOT-YR-7yq" eventType="touchUpInside" id="R76-aR-K7f"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your email address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3K-C2-oDf">
+                                <frame key="frameInset" minX="16" minY="140" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZNp-5u-ICY">
+                                <frame key="frameInset" minX="16" minY="192" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -40,6 +54,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kwickie" id="b6u-dW-IPT"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="N3K-C2-oDf" id="v6a-RP-XGE"/>
+                        <outlet property="passwordTextField" destination="ZNp-5u-ICY" id="DBa-wv-aHr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y5p-ur-IZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

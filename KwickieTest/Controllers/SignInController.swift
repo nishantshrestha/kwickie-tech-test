@@ -14,12 +14,23 @@ import JGProgressHUD
 
 class SignInController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up textfield delegates
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     @IBAction func signInButtonPressed(_ sender: AnyObject) {
-        
+        authenticateUser()
+    }
+    
+    func authenticateUser() {
         // Create the parameters based on the user input
         let params: Parameters = [
             "email": "kevin.jonas@kwickie.com",
@@ -41,7 +52,7 @@ class SignInController: UIViewController {
                 }
                 
             } else {
-                 // Else show an error message
+                // Else show an error message
                 print("Something went wrong while trying to login. Server message: \(error)")
             }
         }
@@ -89,5 +100,21 @@ class SignInController: UIViewController {
                     }
                 }
             }
+    }
+}
+
+extension SignInController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            // Focus on the password field
+            passwordTextField.becomeFirstResponder()
+        } else {
+            // Resign first responder
+            textField.resignFirstResponder()
+            
+            // Call the authentication function
+            authenticateUser()
+        }
+        return true
     }
 }
