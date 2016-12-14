@@ -18,10 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6p-aJ-P6u">
-                                <frame key="frameInset" minX="16" minY="318" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6p-aJ-P6u">
                                 <color key="backgroundColor" red="1" green="0.2481304407119751" blue="0.30241841077804565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="faf-V0-QLJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="SIGN IN"/>
@@ -31,6 +32,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B6p-aJ-P6u" firstAttribute="centerY" secondItem="wEM-Jd-07B" secondAttribute="centerY" id="Jxx-gX-1UQ"/>
+                            <constraint firstItem="B6p-aJ-P6u" firstAttribute="centerX" secondItem="wEM-Jd-07B" secondAttribute="centerX" id="KfJ-5W-D8U"/>
+                            <constraint firstItem="B6p-aJ-P6u" firstAttribute="leading" secondItem="wEM-Jd-07B" secondAttribute="leading" constant="16" id="pE2-YL-E94"/>
+                            <constraint firstAttribute="trailing" secondItem="B6p-aJ-P6u" secondAttribute="trailing" constant="16" id="wYk-sZ-Fvb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kwickie" id="b6u-dW-IPT"/>
                 </viewController>

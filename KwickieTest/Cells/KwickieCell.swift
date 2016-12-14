@@ -18,6 +18,7 @@ class KwickieCell: UITableViewCell {
     // Model associated with the cell
     var kwickie: Kwickie? {
         didSet {
+            kwickieUsersLabel.attributedText = kwickie?.kwickieUsersAttributedString()
             numberOfLikesLabel.text = kwickie?.answerUser.firstName
         }
     }

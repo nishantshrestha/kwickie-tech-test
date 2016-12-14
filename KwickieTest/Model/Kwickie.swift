@@ -25,4 +25,20 @@ class Kwickie: Mappable {
         questionUser <- map["questionUser"]
         answerUser <- map["answerUser"]
     }
+    
+    func kwickieUsersAttributedString() -> NSAttributedString {
+        let questionUserAttributedString = NSAttributedString(string: questionUser.firstName, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0)])
+        
+        let descriptionText = " had a kwickie with "
+        let descriptionAttributedString = NSAttributedString(string: descriptionText, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14.0)])
+        
+        
+        let answerUserAttributedString = NSAttributedString(string: answerUser.firstName, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0)])
+        
+        let usersAttributedString = NSMutableAttributedString(attributedString: questionUserAttributedString)
+        usersAttributedString.append(descriptionAttributedString)
+        usersAttributedString.append(answerUserAttributedString)
+        
+        return usersAttributedString
+    }
 }
