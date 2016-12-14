@@ -24,6 +24,10 @@ class SignInController: UIViewController {
         // Set up textfield delegates
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        // Set up default values
+        emailTextField.text = "kevin.jonas@kwickie.com"
+        passwordTextField.text = "KwickieRocks"
     }
 
     @IBAction func signInButtonPressed(_ sender: AnyObject) {
@@ -33,11 +37,19 @@ class SignInController: UIViewController {
     func authenticateUser() {
         // Create the parameters based on the user input
         let params: Parameters = [
-            "email": "kevin.jonas@kwickie.com",
-            "password": "KwickieRocks"
+            "email": emailTextField.text ?? "",
+            "password": passwordTextField.text ?? ""
         ]
         
+        // Show progressHUD
+        let progressHUD = JGProgressHUD()
+        progressHUD.textLabel.text = "Logging in..."
+        progressHUD.show(in: view)
+        
         signInWithParameters(params: params) { [weak self] (user, error) in
+            // Dismiss progressHUD
+            progressHUD.dismiss()
+            
             // If a user object was returned, then proceed.
             if let user = user {
                 // Go to KwickiesController
