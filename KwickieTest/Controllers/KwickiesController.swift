@@ -16,11 +16,16 @@ class KwickiesController: UITableViewController {
     var user: User?
     
     // Variables to keep track of "infinite" scrolling
-    var currentOffset: Int = 372
+    var currentOffset: Int = 372 // Using high offset value because "limit" does not seem to work in the API.
     var responseLimit: Int = 5
+    
+    var kwickies: [Kwickie]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set the navigation title
+        navigationItem.title = "Approved Kwickies"
         
         if let user = user {
             // Get kwickie videos
@@ -32,19 +37,39 @@ class KwickiesController: UITableViewController {
                 "limit": responseLimit
             ]
             
-            print(KwickiesRouter.Approved.description)
-            
-            Alamofire.request(KwickiesRouter.Approved.description, method: .get, parameters: params, encoding: URLEncoding.default)
-                .validate()
-                .responseArray(completionHandler: { (response: DataResponse<[Kwickie]>) in
+            getApprovedKwickiesWithParameters(params: params, completionHandler: { [weak self] (kwickies) in
+                print("here are the \(kwickies?.count) kwickies")
+                
+                // Set the kwickies variable based on the response
+                self?.kwickies = kwickies
+                
+                // Reload the table view
+                self?.tableView.reloadData()
+            })
+        }
+    }
+    
+    func getApprovedKwickiesWithParameters(params: Parameters, completionHandler: @escaping ([Kwickie]?) -> Void) {
+        // Make network request to fetch the approved Kwickies.
+        Alamofire.request(KwickiesRouter.Approved.description, method: .get, parameters: params, encoding: URLEncoding.default)
+        .validate()
+        .responseArray(completionHandler: { [weak self] (response: DataResponse<[Kwickie]>) in
+            switch response.result {
+                case .success:
                     let kwickies = response.result.value
                     
-                    print("total kwickies: \(kwickies?.count)")
-                    
-                    print("first:")
-                    print(kwickies?.first?.answerUser.firstName)
-                })
-        }
+                    // Call completion handler
+                    completionHandler(kwickies)
+                
+                case .failure(let error):
+                    print("Whoops! \(error.localizedDescription)")
+                
+                    // Call completion handler
+                    completionHandler(nil)
+                }
+            
+        })
+
     }
 
 }
@@ -57,12 +82,12 @@ extension KwickiesController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return kwickies?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Hello world: \(indexPath.row)"
+        cell.textLabel?.text = "Kwickie for index: \(indexPath.row)"
         cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0)
         return cell
     }

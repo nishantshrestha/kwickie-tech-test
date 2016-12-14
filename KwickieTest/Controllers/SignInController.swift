@@ -55,26 +55,34 @@ class SignInController: UIViewController {
         Alamofire.request(AuthRouter.Login.description, method: .post, parameters: params, encoding: JSONEncoding.default)
             .validate()
             .responseJSON { [weak self] response in
-                if let data = response.data {
-                    // Create JSON from response data
-                    let json = JSON(data: data)
+                switch response.result {
+                case .failure(let error):
+                    print("Login error. \(error.localizedDescription)")
                     
-                    // Ensure that there were no errors during login.
-                    if let errorDictionary = json["error"].dictionary {
-                        // Get the error message if available, else use generic error message
-                        let message = errorDictionary["message"]?.string ?? "Login failed. Please try again."
+                    // Call completion handler with nil user object
+                    completionHandler(nil, error.localizedDescription)
+                case .success:
+                    if let data = response.data {
+                        // Create JSON from response data
+                        let json = JSON(data: data)
                         
-                        // Call completion handler
-                        completionHandler(nil, message)
-                    } else {
-                        if let accessToken = json["id"].string, let userDictionary = json["user"].dictionaryObject {
-                            let user = Mapper<User>().map(JSON: userDictionary)
-                            
-                            // Set the accessToken in the singleton class.
-                            NetworkManager.sharedInstance.accessToken = accessToken
+                        // Ensure that there were no errors during login.
+                        if let errorDictionary = json["error"].dictionary {
+                            // Get the error message if available, else use generic error message
+                            let message = errorDictionary["message"]?.string ?? "Login failed. Please try again."
                             
                             // Call completion handler
-                            completionHandler(user, "")
+                            completionHandler(nil, message)
+                        } else {
+                            if let accessToken = json["id"].string, let userDictionary = json["user"].dictionaryObject {
+                                let user = Mapper<User>().map(JSON: userDictionary)
+                                
+                                // Set the accessToken in the singleton class.
+                                NetworkManager.sharedInstance.accessToken = accessToken
+                                
+                                // Call completion handler
+                                completionHandler(user, "")
+                            }
                         }
                     }
                 }
