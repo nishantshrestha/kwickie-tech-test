@@ -19,7 +19,20 @@ class KwickiesController: UITableViewController {
 
 // MARK: Tableview datasource and delegate extension
 extension KwickiesController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "Hello world: \(indexPath.row)"
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0)
+        return cell
+    }
 }
 
 // MARK: Storyboard based instantiation extension
