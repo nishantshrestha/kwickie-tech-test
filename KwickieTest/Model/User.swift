@@ -29,4 +29,8 @@ class User: Mappable {
         firstName <- map["firstName"]
         lastName <- map["lastName"]
     }
+    
+    func fullName() -> String {
+        return firstName.appending(" ").appending(lastName)
+    }
 }

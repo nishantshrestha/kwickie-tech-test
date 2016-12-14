@@ -27,14 +27,17 @@ class Kwickie: Mappable {
     }
     
     func kwickieUsersAttributedString() -> NSAttributedString {
-        let questionUserAttributedString = NSAttributedString(string: questionUser.firstName, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0)])
+        // Create bold attributed string for question user
+        let questionUserAttributedString = NSAttributedString(string: questionUser.fullName(), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0)])
         
+        // Create the attribute string for the description
         let descriptionText = " had a kwickie with "
         let descriptionAttributedString = NSAttributedString(string: descriptionText, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14.0)])
         
+        // Create bold attributed string for answer user
+        let answerUserAttributedString = NSAttributedString(string: answerUser.fullName(), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0)])
         
-        let answerUserAttributedString = NSAttributedString(string: answerUser.firstName, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0)])
-        
+        // Combine all of them
         let usersAttributedString = NSMutableAttributedString(attributedString: questionUserAttributedString)
         usersAttributedString.append(descriptionAttributedString)
         usersAttributedString.append(answerUserAttributedString)
