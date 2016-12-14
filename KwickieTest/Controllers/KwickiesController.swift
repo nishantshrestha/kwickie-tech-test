@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 import SwiftyJSON
+import JGProgressHUD
 
 class KwickiesController: UITableViewController {
 
@@ -37,8 +38,17 @@ class KwickiesController: UITableViewController {
                 "limit": responseLimit
             ]
             
+            // Create progressHUD
+            let progressHUD = JGProgressHUD()
+            progressHUD.textLabel.text = "Fetching kwickies..."
+            progressHUD.show(in: view)
+            
             // Fetch approved Kwickies
             getApprovedKwickiesWithParameters(params: params, completionHandler: { [weak self] (kwickies) in
+                
+                // Dismiss progressHUD
+                progressHUD.dismiss()
+                
                 print("here are the \(kwickies?.count) kwickies")
                 
                 // Set the kwickies variable based on the response
