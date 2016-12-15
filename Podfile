@@ -16,6 +16,9 @@ target 'KwickieTest' do
     
     # UI
     pod 'JGProgressHUD'
+    
+    # Image processing
+    pod 'Kingfisher'
 
 end
 

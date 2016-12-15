@@ -17,8 +17,8 @@ class KwickiesController: UITableViewController {
     var user: User?
     
     // Variables to keep track of "infinite" scrolling
-    var currentOffset: Int = 372 // Using high offset value because "limit" does not seem to work in the API.
-    var responseLimit: Int = 5
+    var currentOffset: Int = 0
+    var responseLimit: Int = 15
     
     var kwickies: [Kwickie]?
     
@@ -55,9 +55,7 @@ class KwickiesController: UITableViewController {
                 
                 // Dismiss progressHUD
                 progressHUD.dismiss()
-                
-                print("here are the \(kwickies?.count) kwickies")
-                
+                                
                 // Set the kwickies variable based on the response
                 self?.kwickies = kwickies
                 
@@ -116,6 +114,11 @@ extension KwickiesController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Deselect tableview
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Get which Kwickie relating to the selected cell
+        if let kwickie = kwickies?[indexPath.row] {
+            // Go to the KwickieDetailsController
+        }
     }
 }
 

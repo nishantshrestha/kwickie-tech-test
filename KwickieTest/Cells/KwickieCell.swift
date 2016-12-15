@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class KwickieCell: UITableViewCell {
 
@@ -21,8 +22,21 @@ class KwickieCell: UITableViewCell {
             // Set the labels
             kwickieUsersLabel.attributedText = kwickie?.kwickieUsersAttributedString()
             numberOfLikesLabel.text = kwickie?.likeCountString()
-            print("kwickie has been liked: \(kwickie?.liked)")
             numberOfCommentsLabel.text = kwickie?.commentCountString()
+            
+            // Set a different color for Kwickies that the current user has liked.
+            if let liked = kwickie?.liked {
+                numberOfLikesLabel.textColor = liked ? UIColor.red : UIColor.black
+            }
+            
+            // Set the thumbnail image 
+            // QUESTION: Should we use thumbTransparentUrl or posterURL
+            if let imageURLString = kwickie?.kwickieVideo.thumbTransparentUrl {
+                if let thumbImageURL = URL(string: imageURLString), let placeholderImage = UIImage(named: "kwickie-placeholder") {
+                    // Set the image
+                    thumbnailImageView.kf.setImage(with: thumbImageURL, placeholder: placeholderImage)
+                }
+            }
         }
     }
     

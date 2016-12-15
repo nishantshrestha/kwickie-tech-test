@@ -81,6 +81,7 @@ class Video: Mappable {
     var lowQualityURL: String!
     var posterURL: String!
     var processPlaylistURL: String!
+    var thumbTransparentUrl: String!
     
     required init?(map: Map) {
         // Validate JSON
@@ -94,6 +95,7 @@ class Video: Mappable {
         lowQualityURL <- map["lowQualityURL"]
         posterURL <- map["posterURL"]
         processPlaylistURL <- map["processPlaylistURL"]
+        thumbTransparentUrl <- map["thumbTransparentUrl"]
     }
     
 }
