@@ -28,6 +28,13 @@ class KwickiesController: UITableViewController {
         // Set the navigation title
         navigationItem.title = "Approved Kwickies"
         
+        // Set up dynamic cell resizing
+        tableView.estimatedRowHeight = 194.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // remove blank cells from tableview
+        tableView.tableFooterView = UIView()
+        
         if let user = user {
             // Get kwickie videos
             // TODO: Architecture decision: Fetch videos here; or prior to coming to this controller.
