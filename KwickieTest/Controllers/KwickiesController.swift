@@ -87,6 +87,14 @@ class KwickiesController: UITableViewController {
         })
 
     }
+    
+    
+    @IBAction func signOutButtonPressed(_ sender: AnyObject) {
+        // TODO: Clear accessToken from user defaults.
+        
+        // Take user back to SignInController
+        navigationController?.popToRootViewController(animated: true)
+    }
 
 }
 
@@ -122,11 +130,13 @@ extension KwickiesController {
                 // Pass the selected kwickie to the controller
                 playerCtrl.kwickie = kwickie
                 // Push view controller to the stack
-                // navigationController?.pushViewController(playerCtrl, animated: true)
-                present(playerCtrl, animated: true, completion: nil)
+                navigationController?.pushViewController(playerCtrl, animated: true)
+                // present(playerCtrl, animated: true, completion: nil)
             }
         }
     }
+    
+    
 }
 
 // TODO: Implement "load more" when a user scrolls to end of the tableview

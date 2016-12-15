@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Kwickies Controller-->
+        <!--Approved Kwickies-->
         <scene sceneID="woJ-2b-wVl">
             <objects>
                 <tableViewController id="3ip-LI-uRL" customClass="KwickiesController" customModule="KwickieTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,6 +71,14 @@
                             <outlet property="delegate" destination="3ip-LI-uRL" id="cc9-tU-PnN"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Approved Kwickies" id="4bm-vf-fuq">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="Fqe-2E-8D2">
+                            <color key="tintColor" red="1" green="0.2481304407119751" blue="0.30241841077804565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="signOutButtonPressed:" destination="3ip-LI-uRL" id="D9E-ZQ-agb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxB-tA-1G3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
