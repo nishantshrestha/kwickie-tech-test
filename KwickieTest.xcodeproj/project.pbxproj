@@ -14,6 +14,9 @@
 		19BE2CE41E01873B003159A0 /* Kwickie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE2CE31E01873B003159A0 /* Kwickie.swift */; };
 		19BE2CE81E018A8F003159A0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE2CE71E018A8F003159A0 /* Router.swift */; };
 		19BE2CEA1E01959F003159A0 /* KwickieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE2CE91E01959F003159A0 /* KwickieCell.swift */; };
+		19BFEDBC1E034C8F0053A0DF /* KwickiePlayerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BFEDBB1E034C8F0053A0DF /* KwickiePlayerController.storyboard */; };
+		19BFEDBE1E034D420053A0DF /* KwickiePlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BFEDBD1E034D420053A0DF /* KwickiePlayerController.swift */; };
+		19BFEDC01E0350D80053A0DF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BFEDBF1E0350D80053A0DF /* UIViewExtensions.swift */; };
 		19E06CAE1E01685C00685C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E06CAD1E01685C00685C12 /* AppDelegate.swift */; };
 		19E06CB31E01685C00685C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E06CB11E01685C00685C12 /* Main.storyboard */; };
 		19E06CB51E01685C00685C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E06CB41E01685C00685C12 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		19BE2CE31E01873B003159A0 /* Kwickie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Kwickie.swift; path = Model/Kwickie.swift; sourceTree = "<group>"; };
 		19BE2CE71E018A8F003159A0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Helpers/Router.swift; sourceTree = "<group>"; };
 		19BE2CE91E01959F003159A0 /* KwickieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KwickieCell.swift; path = Cells/KwickieCell.swift; sourceTree = "<group>"; };
+		19BFEDBB1E034C8F0053A0DF /* KwickiePlayerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = KwickiePlayerController.storyboard; path = Storyboards/KwickiePlayerController.storyboard; sourceTree = "<group>"; };
+		19BFEDBD1E034D420053A0DF /* KwickiePlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KwickiePlayerController.swift; path = Controllers/KwickiePlayerController.swift; sourceTree = "<group>"; };
+		19BFEDBF1E0350D80053A0DF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = Extensions/UIViewExtensions.swift; sourceTree = "<group>"; };
 		19E06CAA1E01685C00685C12 /* KwickieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KwickieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E06CAD1E01685C00685C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19E06CB21E01685C00685C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 			children = (
 				19BE2CD81E016A5C003159A0 /* SignInController.swift */,
 				19BE2CDA1E017233003159A0 /* KwickiesController.swift */,
+				19BFEDBD1E034D420053A0DF /* KwickiePlayerController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 			children = (
 				19E06CB11E01685C00685C12 /* Main.storyboard */,
 				19BE2CDC1E017285003159A0 /* KwickiesController.storyboard */,
+				19BFEDBB1E034C8F0053A0DF /* KwickiePlayerController.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				19BE2CE71E018A8F003159A0 /* Router.swift */,
+				19BFEDBF1E0350D80053A0DF /* UIViewExtensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -339,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BFEDBC1E034C8F0053A0DF /* KwickiePlayerController.storyboard in Resources */,
 				19E06CB81E01685C00685C12 /* LaunchScreen.storyboard in Resources */,
 				19E06CB51E01685C00685C12 /* Assets.xcassets in Resources */,
 				19BE2CDD1E017285003159A0 /* KwickiesController.storyboard in Resources */,
@@ -505,12 +515,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BFEDBE1E034D420053A0DF /* KwickiePlayerController.swift in Sources */,
 				19BE2CEA1E01959F003159A0 /* KwickieCell.swift in Sources */,
 				19BE2CDB1E017233003159A0 /* KwickiesController.swift in Sources */,
 				19BE2CE41E01873B003159A0 /* Kwickie.swift in Sources */,
 				19E06CAE1E01685C00685C12 /* AppDelegate.swift in Sources */,
 				19BE2CD91E016A5C003159A0 /* SignInController.swift in Sources */,
 				19BE2CE81E018A8F003159A0 /* Router.swift in Sources */,
+				19BFEDC01E0350D80053A0DF /* UIViewExtensions.swift in Sources */,
 				19BE2CDF1E0177EA003159A0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

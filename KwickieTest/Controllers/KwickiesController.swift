@@ -118,6 +118,30 @@ extension KwickiesController {
         // Get which Kwickie relating to the selected cell
         if let kwickie = kwickies?[indexPath.row] {
             // Go to the KwickieDetailsController
+            if let playerCtrl = KwickiePlayerController.storyboardInstance() {
+                // Pass the selected kwickie to the controller
+                playerCtrl.kwickie = kwickie
+                // Push view controller to the stack
+                // navigationController?.pushViewController(playerCtrl, animated: true)
+                present(playerCtrl, animated: true, completion: nil)
+            }
+        }
+    }
+}
+
+// TODO: Implement "load more" when a user scrolls to end of the tableview
+// MARK: UIScrollView Delegate Methods
+extension KwickiesController {
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        // Get the current offset
+        let currentOffset = scrollView.contentOffset.y
+        // Get the max offset
+        let maxOffset = scrollView.contentSize.height - scrollView.frame.size.height // contentSize.height stores the total height of the scrollView; scrollView.frame.size.height stores the 'designated' height of the scrollView in the view hierarchy
+        
+        let scrollThreshold = 2 * tableView.estimatedRowHeight
+        
+        if maxOffset - currentOffset <= scrollThreshold {
+            print("load more Kwickies!!")
         }
     }
 }

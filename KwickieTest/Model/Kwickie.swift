@@ -94,7 +94,7 @@ class Video: Mappable {
         highQualityURL <- map["highQualityURL"]
         lowQualityURL <- map["lowQualityURL"]
         posterURL <- map["posterURL"]
-        processPlaylistURL <- map["processPlaylistURL"]
+        processPlaylistURL <- map["processPlaylistUrl"]
         thumbTransparentUrl <- map["thumbTransparentUrl"]
     }
     
