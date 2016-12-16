@@ -11,6 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 import SwiftyJSON
 import JGProgressHUD
+import DZNEmptyDataSet
 
 class KwickiesController: UITableViewController {
 
@@ -31,6 +32,10 @@ class KwickiesController: UITableViewController {
         // Set up dynamic cell resizing
         tableView.estimatedRowHeight = 194.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // Set up empty data set delegates
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
         
         // remove blank cells from tableview
         tableView.tableFooterView = UIView()
@@ -96,6 +101,19 @@ class KwickiesController: UITableViewController {
         navigationController?.popToRootViewController(animated: true)
     }
 
+}
+
+// MARK: Empty data set methods
+extension KwickiesController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let title = "Looks like there are no Kwickies yet!"
+        return NSAttributedString(string: title)
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let description = "Don't panic though, they'll be here soon"
+        return NSAttributedString(string: description)
+    }
 }
 
 

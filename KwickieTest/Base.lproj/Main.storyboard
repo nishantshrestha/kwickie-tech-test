@@ -30,16 +30,18 @@
                                     <action selector="signInButtonPressed:" destination="OOT-YR-7yq" eventType="touchUpInside" id="R76-aR-K7f"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your email address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3K-C2-oDf">
-                                <frame key="frameInset" minX="16" minY="140" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your email address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3K-C2-oDf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mAH-X2-YGE"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZNp-5u-ICY">
-                                <frame key="frameInset" minX="16" minY="192" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZNp-5u-ICY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="16p-zc-D6w"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -47,9 +49,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="B6p-aJ-P6u" firstAttribute="top" secondItem="ZNp-5u-ICY" secondAttribute="bottom" constant="16" id="745-LA-eFm"/>
+                            <constraint firstItem="ZNp-5u-ICY" firstAttribute="leading" secondItem="wEM-Jd-07B" secondAttribute="leading" constant="16" id="9GA-kk-mN8"/>
+                            <constraint firstAttribute="trailing" secondItem="N3K-C2-oDf" secondAttribute="trailing" constant="16" id="EA1-1P-SzR"/>
+                            <constraint firstItem="N3K-C2-oDf" firstAttribute="leading" secondItem="wEM-Jd-07B" secondAttribute="leading" constant="16" id="Fmq-lI-fJQ"/>
                             <constraint firstItem="B6p-aJ-P6u" firstAttribute="centerY" secondItem="wEM-Jd-07B" secondAttribute="centerY" id="Jxx-gX-1UQ"/>
                             <constraint firstItem="B6p-aJ-P6u" firstAttribute="centerX" secondItem="wEM-Jd-07B" secondAttribute="centerX" id="KfJ-5W-D8U"/>
+                            <constraint firstAttribute="trailing" secondItem="ZNp-5u-ICY" secondAttribute="trailing" constant="16" id="OnN-qV-1KJ"/>
                             <constraint firstItem="B6p-aJ-P6u" firstAttribute="leading" secondItem="wEM-Jd-07B" secondAttribute="leading" constant="16" id="pE2-YL-E94"/>
+                            <constraint firstItem="ZNp-5u-ICY" firstAttribute="top" secondItem="N3K-C2-oDf" secondAttribute="bottom" constant="8" id="r5Q-oi-If0"/>
                             <constraint firstAttribute="trailing" secondItem="B6p-aJ-P6u" secondAttribute="trailing" constant="16" id="wYk-sZ-Fvb"/>
                         </constraints>
                     </view>

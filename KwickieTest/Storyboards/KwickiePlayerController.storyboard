@@ -42,7 +42,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kwickie" id="bb4-X0-EYH">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NUh-Ee-uaG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="NUh-Ee-uaG">
                             <color key="tintColor" red="1" green="0.2481304407119751" blue="0.30241841077804565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="closeButtonPressed:" destination="W4A-C2-3M6" id="c55-ys-GFz"/>
