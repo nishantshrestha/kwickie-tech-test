@@ -26,7 +26,7 @@ class KwickieCell: UITableViewCell {
             
             // Set a different color for Kwickies that the current user has liked.
             if let liked = kwickie?.liked {
-                numberOfLikesLabel.textColor = liked ? UIColor.red : UIColor.black
+                numberOfLikesLabel.textColor = liked ? UIColor("#FF4252") : UIColor("#636370")
             }
             
             // Set the thumbnail image 

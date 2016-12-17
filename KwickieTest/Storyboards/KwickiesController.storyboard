@@ -15,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kwickieCell" rowHeight="194" id="Yb9-Ki-5a5" customClass="KwickieCell" customModule="KwickieTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="194"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="kwickieCell" rowHeight="202" id="Yb9-Ki-5a5" customClass="KwickieCell" customModule="KwickieTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="202"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yb9-Ki-5a5" id="Afq-uM-P6t">
-                                    <frame key="frameInset" width="375" height="193"/>
+                                    <frame key="frameInset" width="375" height="201"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kwickie-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Eve-e8-oql">
@@ -27,35 +27,35 @@
                                                 <constraint firstAttribute="height" constant="120" id="qDn-V5-u8X"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="134k Likes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OH-ri-llZ">
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Someone just had a kwickie with someone." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW6-v5-QLL">
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tId-1r-Hmf">
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="134k Likes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OH-ri-llZ">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.38823529410000002" green="0.38823529410000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="tId-1r-Hmf" firstAttribute="top" secondItem="Eve-e8-oql" secondAttribute="bottom" constant="8" id="13Z-7C-yZa"/>
-                                        <constraint firstItem="Eve-e8-oql" firstAttribute="top" secondItem="sW6-v5-QLL" secondAttribute="bottom" constant="8" id="F0A-gk-FPo"/>
+                                        <constraint firstItem="tId-1r-Hmf" firstAttribute="top" secondItem="Eve-e8-oql" secondAttribute="bottom" constant="16" id="13Z-7C-yZa"/>
+                                        <constraint firstItem="Eve-e8-oql" firstAttribute="top" secondItem="sW6-v5-QLL" secondAttribute="bottom" constant="16" id="F0A-gk-FPo"/>
                                         <constraint firstAttribute="bottom" secondItem="tId-1r-Hmf" secondAttribute="bottom" constant="8" id="FUo-oP-Fje"/>
-                                        <constraint firstItem="4OH-ri-llZ" firstAttribute="leading" secondItem="Afq-uM-P6t" secondAttribute="leading" constant="8" id="KxT-Ql-ud9"/>
                                         <constraint firstAttribute="trailing" secondItem="Eve-e8-oql" secondAttribute="trailing" constant="16" id="Nmb-Gl-UxP"/>
-                                        <constraint firstItem="4OH-ri-llZ" firstAttribute="top" secondItem="Eve-e8-oql" secondAttribute="bottom" constant="8" id="WDe-kn-Nim"/>
+                                        <constraint firstItem="4OH-ri-llZ" firstAttribute="top" secondItem="Eve-e8-oql" secondAttribute="bottom" constant="16" id="WDe-kn-Nim"/>
                                         <constraint firstAttribute="bottom" secondItem="4OH-ri-llZ" secondAttribute="bottom" constant="8" id="brW-dB-lrK"/>
-                                        <constraint firstAttribute="trailing" secondItem="tId-1r-Hmf" secondAttribute="trailing" constant="8" id="cdF-8v-XxM"/>
-                                        <constraint firstAttribute="trailing" secondItem="sW6-v5-QLL" secondAttribute="trailing" constant="8" id="d4c-Mx-e3j"/>
+                                        <constraint firstAttribute="trailing" secondItem="tId-1r-Hmf" secondAttribute="trailing" constant="16" id="cdF-8v-XxM"/>
+                                        <constraint firstAttribute="trailing" secondItem="sW6-v5-QLL" secondAttribute="trailing" constant="16" id="d4c-Mx-e3j"/>
                                         <constraint firstItem="sW6-v5-QLL" firstAttribute="top" secondItem="Afq-uM-P6t" secondAttribute="top" constant="8" id="mIg-sl-ILF"/>
                                         <constraint firstItem="Eve-e8-oql" firstAttribute="leading" secondItem="Afq-uM-P6t" secondAttribute="leading" constant="16" id="phU-xw-jcx"/>
-                                        <constraint firstItem="sW6-v5-QLL" firstAttribute="leading" secondItem="Afq-uM-P6t" secondAttribute="leading" constant="8" id="tPz-fL-EXH"/>
+                                        <constraint firstItem="tId-1r-Hmf" firstAttribute="leading" secondItem="4OH-ri-llZ" secondAttribute="trailing" constant="8" id="rAz-xk-okD"/>
+                                        <constraint firstItem="sW6-v5-QLL" firstAttribute="leading" secondItem="Afq-uM-P6t" secondAttribute="leading" constant="16" id="tPz-fL-EXH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

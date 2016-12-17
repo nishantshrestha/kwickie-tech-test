@@ -57,17 +57,17 @@ class Kwickie: Mappable {
     
     func likeCountString() -> String {
         if likeCount == 1 {
-            return "1 Like"
+            return "1 like"
         } else {
-            return "\(likeCount ?? 0) Likes"
+            return "\(likeCount ?? 0) likes"
         }
     }
     
     func commentCountString() -> String {
         if commentsCount == 1 {
-            return "1 Comment"
+            return "1 comment"
         } else {
-            return "\(commentsCount ?? 0) Comments"
+            return "\(commentsCount ?? 0) comments"
         }
     }
 }
