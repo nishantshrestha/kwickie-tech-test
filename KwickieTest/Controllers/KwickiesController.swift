@@ -99,6 +99,9 @@ class KwickiesController: UITableViewController {
     @IBAction func signOutButtonPressed(_ sender: AnyObject) {
         // TODO: Clear accessToken from user defaults.
         
+        // Set the accessToken in the singleton class.
+        NetworkManager.sharedInstance.accessToken = ""
+        
         // Take user back to SignInController
         navigationController?.popToRootViewController(animated: true)
     }
