@@ -18,10 +18,12 @@ class KwickiesController: UITableViewController {
     var user: User?
     
     // Variables to keep track of "infinite" scrolling
-    var currentOffset: Int = 0
+    var offset: Int = 0
     var responseLimit: Int = 15
     
     var kwickies: [Kwickie]?
+    
+    var loadingMore: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,7 @@ class KwickiesController: UITableViewController {
             
             // Create the params for the Kwickies fetch network request
             let params: Parameters = [
-                "offset": currentOffset,
+                "offset": offset,
                 "limit": responseLimit
             ]
             
@@ -107,12 +109,12 @@ class KwickiesController: UITableViewController {
 extension KwickiesController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let title = "Looks like there are no Kwickies yet!"
-        return NSAttributedString(string: title)
+        return NSAttributedString(string: title, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16.0)])
     }
     
     func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let description = "Don't panic though, they'll be here soon"
-        return NSAttributedString(string: description)
+        return NSAttributedString(string: description, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14.0)])
     }
 }
 
@@ -170,7 +172,62 @@ extension KwickiesController {
         
         if maxOffset - currentOffset <= scrollThreshold {
             print("load more Kwickies!!")
-        }
+            // Only proceed if we're not currently loading more kwickies
+            if !loadingMore {
+                // Toggle the variable to true to indicate start of new fetch.
+                loadingMore = true
+                
+                // Update current offset
+                let newOffset = offset + responseLimit
+                
+                // Create the params for the Kwickies fetch network request
+                let params: Parameters = [
+                    "offset": newOffset,
+                    "limit": responseLimit
+                ]
+                
+                // Create progressHUD
+                let progressHUD = JGProgressHUD()
+                progressHUD.textLabel.text = "Fetching more kwickies..."
+                progressHUD.show(in: navigationController?.view)
+                
+                // Fetch approved Kwickies
+                getApprovedKwickiesWithParameters(params: params, completionHandler: { [weak self] (kwickies) in
+                    
+                        // Dismiss progressHUD
+                        progressHUD.dismiss()
+                    
+                        // Debug print
+                        print("**total kwickies prior to fetch: \(self?.kwickies?.count)**")
+                    
+                        // Set the kwickies variable based on the response
+                        if let kwickies = kwickies {
+                            // Append the content of the array to the data source
+                            self?.kwickies?.append(contentsOf: kwickies)
+                            
+                            // Debug print
+                            print("**total kwickies after the fetch: \(self?.kwickies?.count)**")
+                            
+                            // Increment the global offset
+                            self?.offset = newOffset
+                            
+                            // Reload the table view
+                            self?.tableView.reloadData()
+                            
+                            // Scroll to the new indexPath
+                            if let offset = self?.offset, let limit = self?.responseLimit {
+                                let index = offset // If we currently have 15 items, then for the next fetch, we need to focus on the 16th item. If we have 30 items, we need to focus on the 31st.
+                                let newDataIndexPath = IndexPath(item: index, section: 0)
+                                
+                                self?.tableView.scrollToRow(at: newDataIndexPath, at: .top, animated: true)
+                            }
+                        }
+                    
+                        // Toggle isLoadingMore to false to denote end of fetching
+                        self?.loadingMore = false
+                    })
+                }
+            }
     }
 }
 
