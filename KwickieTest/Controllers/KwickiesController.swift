@@ -212,13 +212,16 @@ extension KwickiesController {
                             self?.offset = newOffset
                             
                             // Reload the table view
+                            // TODO: This might not be efficient to reload entire tableView
+                            // Might be a good place to try IGListKit. https://github.com/Instagram/IGListKit/
                             self?.tableView.reloadData()
                             
                             // Scroll to the new indexPath
                             if let offset = self?.offset, let limit = self?.responseLimit {
-                                let index = offset // If we currently have 15 items, then for the next fetch, we need to focus on the 16th item. If we have 30 items, we need to focus on the 31st.
+                                let index = offset // Offset will give us the indexPath.row for the first* cell that was appended after the new fetch.
                                 let newDataIndexPath = IndexPath(item: index, section: 0)
                                 
+                                // Scroll to the start of the new data set
                                 self?.tableView.scrollToRow(at: newDataIndexPath, at: .top, animated: true)
                             }
                         }
