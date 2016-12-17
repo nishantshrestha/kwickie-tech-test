@@ -15,6 +15,7 @@ class KwickieCell: UITableViewCell {
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     @IBOutlet weak var numberOfCommentsLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
     
     // Model associated with the cell
     var kwickie: Kwickie? {
@@ -23,6 +24,7 @@ class KwickieCell: UITableViewCell {
             kwickieUsersLabel.attributedText = kwickie?.kwickieUsersAttributedString()
             numberOfLikesLabel.text = kwickie?.likeCountString()
             numberOfCommentsLabel.text = kwickie?.commentCountString()
+            createdAtLabel.text = kwickie?.timeSinceCreation()
             
             // Set a different color for Kwickies that the current user has liked.
             if let liked = kwickie?.liked {

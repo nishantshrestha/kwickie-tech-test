@@ -32,7 +32,7 @@ class KwickiesController: UITableViewController {
         navigationItem.title = "Approved Kwickies"
         
         // Set up dynamic cell resizing
-        tableView.estimatedRowHeight = 194.0
+        tableView.estimatedRowHeight = 216.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
         // Set up empty data set delegates

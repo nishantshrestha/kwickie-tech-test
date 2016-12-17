@@ -17,6 +17,7 @@ class Kwickie: Mappable {
     var commentsCount: Int!
     var liked: Bool!
     var likeCount: Int!
+    var createdAt: String?
     
     // TODO: Implement other properties (not crucial for tech test)
     
@@ -34,6 +35,7 @@ class Kwickie: Mappable {
         commentsCount <- map["kwickieCommentProperties.commentsCount"]
         liked <- map["liked"]
         likeCount <- map["likesCount"]
+        createdAt <- map["createdAt"]
     }
     
     func kwickieUsersAttributedString() -> NSAttributedString {
@@ -61,6 +63,23 @@ class Kwickie: Mappable {
     
     func commentCountString() -> String {
         return (commentsCount == 1) ? "1 comment" : "\(commentsCount ?? 0) comments"
+    }
+    
+    func timeSinceCreation() -> String {
+        if let createdAt = createdAt {
+            // Create date formatter
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            
+            // Create the date object based on the string
+            let createdDate = dateFormatter.date(from: createdAt)?.timeIntervalSince1970 ?? 0
+            let currentDate = Date().timeIntervalSince1970
+            
+            let timeDifference = currentDate - createdDate // This stores the timedifference in seconds
+            
+            return getStringIntervalRepresentationFor(duration: timeDifference)
+        }
+        return ""
     }
 }
 
