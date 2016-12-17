@@ -3,7 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +21,39 @@
                         <subviews>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="VAQ-Sl-K7G">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="VAQ-Sl-K7G" secondAttribute="height" multiplier="2:1" id="MXV-ac-sMG"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHy-Ns-AzJ">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1A-aK-NCy" userLabel="Top Border">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="UOb-ch-9bG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbx-Oi-fsf" userLabel="Bottom Border">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ehh-3H-zEj"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VAQ-Sl-K7G" firstAttribute="top" secondItem="YFq-kz-itf" secondAttribute="bottom" constant="8" id="0cB-vi-deA"/>
-                            <constraint firstItem="yHy-Ns-AzJ" firstAttribute="top" secondItem="VAQ-Sl-K7G" secondAttribute="bottom" constant="16" id="Kfh-zv-eep"/>
+                            <constraint firstItem="Mbx-Oi-fsf" firstAttribute="leading" secondItem="4B4-a7-Exy" secondAttribute="leading" id="4ps-cB-Twn"/>
                             <constraint firstAttribute="trailing" secondItem="VAQ-Sl-K7G" secondAttribute="trailing" id="OWz-mG-zJZ"/>
                             <constraint firstItem="VAQ-Sl-K7G" firstAttribute="leading" secondItem="4B4-a7-Exy" secondAttribute="leading" id="PtK-HT-CgN"/>
+                            <constraint firstItem="x1A-aK-NCy" firstAttribute="top" secondItem="VAQ-Sl-K7G" secondAttribute="top" id="Tml-zy-MMi"/>
                             <constraint firstItem="yHy-Ns-AzJ" firstAttribute="leading" secondItem="4B4-a7-Exy" secondAttribute="leading" constant="16" id="WX1-uh-1vM"/>
+                            <constraint firstAttribute="trailing" secondItem="x1A-aK-NCy" secondAttribute="trailing" id="Yg5-vZ-iPr"/>
+                            <constraint firstItem="VAQ-Sl-K7G" firstAttribute="height" secondItem="4B4-a7-Exy" secondAttribute="height" multiplier="0.4" id="bH9-h7-XGA"/>
+                            <constraint firstItem="Mbx-Oi-fsf" firstAttribute="bottom" secondItem="VAQ-Sl-K7G" secondAttribute="bottom" id="nSY-Xd-mcs"/>
+                            <constraint firstAttribute="trailing" secondItem="Mbx-Oi-fsf" secondAttribute="trailing" id="ss5-dA-Dha"/>
+                            <constraint firstItem="x1A-aK-NCy" firstAttribute="leading" secondItem="4B4-a7-Exy" secondAttribute="leading" id="tuf-0t-X7p"/>
+                            <constraint firstItem="x1A-aK-NCy" firstAttribute="top" secondItem="YFq-kz-itf" secondAttribute="bottom" constant="8" id="vX2-ot-Keu"/>
+                            <constraint firstItem="yHy-Ns-AzJ" firstAttribute="top" secondItem="Mbx-Oi-fsf" secondAttribute="bottom" constant="16" id="wDE-1G-frn"/>
                             <constraint firstAttribute="trailing" secondItem="yHy-Ns-AzJ" secondAttribute="trailing" constant="16" id="x1j-JZ-cRf"/>
                         </constraints>
                     </view>

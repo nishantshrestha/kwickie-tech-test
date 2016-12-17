@@ -43,8 +43,8 @@ class KwickiePlayerController: UIViewController {
                     // Setup the playerController
                     playerController.player = kwickiePlayer
                     playerController.showsPlaybackControls = false
-                    playerController.view.backgroundColor = .white
-                    playerController.videoGravity = AVLayerVideoGravityResizeAspectFill
+                    playerController.view.backgroundColor = UIColor("#F8F8F8")
+                    playerController.videoGravity = AVLayerVideoGravityResizeAspect
                     
                     // Add player's view to the view hierarchy
                     playerView.addSubview(playerController.view)
